@@ -5,6 +5,8 @@ from demoqa_tests import resource
 class RegistrationPage:
     def open_registration_page(self):
         browser.open('/automation-practice-form')
+        browser.driver.execute_script("document.querySelector('.body-height').style.transform='scale(.65)'")
+        browser.element('[aria-label="Consent"]').click()
         return self
 
     def register(self, user):
